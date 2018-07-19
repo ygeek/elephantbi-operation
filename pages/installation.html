@@ -5,13 +5,22 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>ElephantBI</title>
 	<style>
-		body {
+		html, body {
+			height: 100%;
+
+			overflow: hidden;
 			font-family: "PingFang SC","Microsoft YaHei","微软雅黑","MicrosoftJhengHei","华文细黑",STHeiti,MingLiu,sans-serif;
 		}
+		body {
+			position: relative;
+		}
 		.container {
-			position:relative;
-			text-align:center;
-			top:45%;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
+			text-align: center;
 		}
 
 		.btn {
