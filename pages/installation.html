@@ -1,0 +1,40 @@
+<html>
+	
+<head>
+	<title>ElephantBI</title>
+	<style>
+		.container {
+			position:relative;
+			text-align:center;
+			top:45%;
+		}
+
+		.btn {
+		    margin: 0;
+		    width: 350px;
+		    height: 80px;
+		    font-size: 16;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="container">
+		<button class="btn" onclick="openAuthLink();">ElephnatBI</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		function openAuthLink() {
+			$.get('https://api.elephantbi.com/wx/auth/link', function(data, status){
+				let authLink = data.auth_link;
+
+				window.open(authLink);
+			});
+		}
+	</script>
+</body>	
+
+</html>
