@@ -3,6 +3,9 @@
 <head>
 	<title>ElephantBI</title>
 	<style>
+		body {
+			font-family: "PingFang SC","Microsoft YaHei","微软雅黑","MicrosoftJhengHei","华文细黑",STHeiti,MingLiu,sans-serif;
+		}
 		.container {
 			position:relative;
 			text-align:center;
@@ -10,22 +13,33 @@
 		}
 
 		.btn {
-		    margin: 0;
-		    width: 350px;
-		    height: 80px;
-		    font-size: 16;
+	    margin: 0 auto;
+	    width: 240px;
+	    height: 80px;
+	    font-size: 18;
+			background: none;
+	    color: inherit;
+	    border: none;
+	    padding: 0;
+	    font: inherit;
+	    cursor: pointer;
+	    outline: inherit;
+	    line-height: 40px;
+	    border-width: 1px;
+	    border-style: solid;
+	    border-radius: 3px;
+	    border-color: #6070e0;
+	    background-color: #6871e7;
+	    color: #fff;
+	    display: block;
+	    border-radius: 5px;
+	    -webkit-box-shadow: 2px 1px 4px #aeaeae;
+	    box-shadow: 2px 1px 4px #aeaeae;
 		}
 	</style>
 </head>
 
 <body>
-
-	<div class="container">
-		<button class="btn" onclick="openAuthLink();">ElephantBI</button>
-	</div>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
 	<script type="text/javascript">
 		function openAuthLink() {
 			$.get('https://api.elephantbi.com/wx/auth/link', function(data, status){
@@ -35,6 +49,13 @@
 			});
 		}
 	</script>
+
+	<div class="container">
+		<button class="btn" onclick="openAuthLink();">安装 ElephantBI</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 </body>	
 
 </html>
